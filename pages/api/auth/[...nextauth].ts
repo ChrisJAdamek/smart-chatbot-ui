@@ -9,14 +9,19 @@ const providers = [
     credentials: {
       email: { label: 'Email', type: 'text', placeholder: 'example@example.com' },
     },
-    async authorize(credentials, req) {
-      const email = credentials.email.trim();
-      const id = getUserHashFromMail(email);
-      return {
-        id,
-        email,
-      };
-    },
+async authorize(credentials, req) {
+  if (!credentials || !credentials.email) {
+    throw new Error('Missing credentials');
+  }
+
+  const email = credentials.email.trim();
+  const id = getUserHashFromMail(email);
+  return {
+    id,
+    email,
+  };
+},
+
   }),
 ];
 
