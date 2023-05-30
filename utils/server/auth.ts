@@ -1,3 +1,4 @@
+// utils/server/auth.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSession } from 'next-auth';
 
@@ -17,7 +18,6 @@ export const getUserHash = async (
   req: NextApiRequest,
   res: NextApiResponse,
 ): Promise<string> => {
-  // TODO: support no auth environment.
 
   const session = await getServerSession(req, res, authOptions);
   if (!session) {
