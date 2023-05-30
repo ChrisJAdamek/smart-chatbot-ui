@@ -1,8 +1,5 @@
 import NextAuth, { NextAuthOptions, PagesOptions } from 'next-auth';
-import CognitoProvider from 'next-auth/providers/cognito';
 import Credentials from 'next-auth/providers/credentials';
-import GithubProvider from 'next-auth/providers/github';
-import GoogleProvider from 'next-auth/providers/google';
 
 import { getUserHashFromMail } from '@/utils/server/auth';
 
