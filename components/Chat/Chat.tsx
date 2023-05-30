@@ -210,13 +210,12 @@ export const Chat = memo(() => {
             <div className="text-center text-lg text-black dark:text-white">
               <div className="mb-8">{`Smart Chatbot is an open source clone of OpenAI's ChatGPT UI.`}</div>
               <div className="mb-2 font-bold">
-                hatbot UI is 100% unaffiliated with OpenAI.
+                Smart Chat is 100% unaffiliated with OpenAI.
               </div>
             </div>
             <div className="text-center text-gray-500 dark:text-gray-400">
               <div className="mb-2">
-                Chatbot UI allows you to plug in your API key to use this UI
-                with their API.
+                Plug in your API key to use this bot with their OpenAI's API.
               </div>
               <div className="mb-2">
                 It is <span className="italic">only</span> used to communicate
@@ -260,7 +259,7 @@ export const Chat = memo(() => {
                           <Spinner size="16px" className="mx-auto" />
                         </div>
                       ) : (
-                        'Chatbot UI'
+                        'Chatty'
                       )}
                     </div>
 
