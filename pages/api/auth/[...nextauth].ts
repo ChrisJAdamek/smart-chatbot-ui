@@ -24,31 +24,6 @@ if (process.env.NEXTAUTH_ENABLED === 'false') {
     }),
   );
 }
-if (process.env.GOOGLE_CLIENT_ID) {
-  providers.push(
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    }),
-  );
-}
-if (process.env.GITHUB_CLIENT_ID) {
-  providers.push(
-    GithubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID!,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
-    }),
-  );
-}
-if (process.env.COGNITO_CLIENT_ID) {
-  providers.push(
-    CognitoProvider({
-      clientId: process.env.COGNITO_CLIENT_ID,
-      clientSecret: process.env.COGNITO_CLIENT_SECRET!,
-      issuer: process.env.COGNITO_ISSUER,
-    }),
-  );
-}
 
 let pages: Partial<PagesOptions> = {};
 
