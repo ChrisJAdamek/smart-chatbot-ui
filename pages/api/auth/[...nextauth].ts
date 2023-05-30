@@ -1,5 +1,5 @@
 // pages/api/auth/[...nextauth].ts
-import NextAuth from 'next-auth';
+import { NextAuthOptions, PagesOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { getUserHashFromMail } from '@/utils/server/auth';
 
