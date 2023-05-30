@@ -471,9 +471,7 @@ export const ChatInput = ({ onSend, onRegenerate, textareaRef }: Props) => {
           Smart ChatBot UI
         </a>
         .{' '}
-        {t(
-          "Smart Chatbot UI is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",
-        )}
+
       </div>
     </div>
   );
