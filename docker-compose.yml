@@ -1,31 +1,33 @@
 version: '3.6'
-   
-services:  
-  chatui:  
-    build: .  
+
+services:
+  chatui:
+    build: .
     container_name: chatty
-    env_file:  
-      - .env.local  
+    ports:
+      - 127.0.0.1:3000:3000
+    env_file:
+      - .env.local
     networks:
       - my-network
-  mongo:  
-    image: mongo:5.0  
-    restart: always  
-    volumes:  
-      - mongodb-configdb:/data/configdb  
-      - mongodb-data:/data/db  
-    env_file:  
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    restart: always
+    volumes:
+      - mongodb-configdb:/data/configdb
+      - mongodb-data:/data/db
+    env_file:
       - .env.local
     networks:
       - my-network
 
-volumes:  
-  mongodb-data:  
-    name: chatui-mongodb-data  
-  mongodb-configdb:  
+volumes:
+  mongodb-data:
+    name: chatui-mongodb-data
+  mongodb-configdb:
     name: chatui-mongodb-configdb
 
 networks:
   my-network:
     external: true
-
